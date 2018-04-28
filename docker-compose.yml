@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  openob:
+    privileged: true
+    volumes:
+      - /dev/snd:/dev/snd
+    build:
+      context: openob
+      args:
+        - http_proxy
+
